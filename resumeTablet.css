@@ -1,0 +1,28 @@
+html,body{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+    border: 2px green solid;
+}
+
+.navigator{
+    display: flex;
+    justify-content: center;
+}
+
+.navigator >*{
+    margin: 1rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro{
+    border: 2px solid blue;
+}

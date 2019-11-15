@@ -1,0 +1,40 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+}
+
+.navigator{
+    display: flex;
+    justify-content: center;
+
+    border: 2px solid red;
+}
+
+.navigator >*{
+    margin: 1rem;
+}
+
+.intro{
+    height: 100%;
+}
+
+.leftSide{
+    border: 2px solid purple;
+}
+
+.leftSide >*{
+    display: flex;
+    justify-content: center;
+}
+
+.rightSide{
+    border: 2px solid orange;
+}
+
+.rightSide >*{
+    display: flex;
+    justify-content: center;
+}

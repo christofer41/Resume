@@ -4,43 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="resume.css">
-    <script type="text/javascript" src="jquery-3.4.1.js"></script>
-    <script src="resume.js"></script>
-    <title>Document</title>
+    <!--För dator-->
+    <link rel="stylesheet" media="(min-width: 800px)" href="resume.css">
+    <!--För mobil-->
+    <link rel="stylesheet" media="(max-width: 799px)"  href="resumePhone.css">
+    
+    <!--JQuerry-->
+    <script defer type="text/javascript" src="jquery-3.4.1.js"></script>
+    <!--För dator-->
+    <script defer type="text/javascript" media="(min-width: 800px)" src="resume.js"></script>
+
+    <title>Interactive Resume</title>
 </head>
 <body>
     <header>
-        <h1>Christofer Carlsson</h1>
-        <h4>"Hard working programmer, willing to learn"</h4>
+        <div class="navigator">
+            <p class="navigationButtons">Intro</p>
+            <p class="navigationButtons">Experience</p>
+            <p class="navigationButtons">Studies</p>
+            <p class="navigationButtons">link</p>
+            <p class="navigationButtons">Contact</p>
+        </div>
     </header>
     <main>
-        <div class="navigator">
-            <p>link</p>
-            <p>link</p>
-            <p>link</p>
-            <p>link</p>
-            <p>link</p>
-        </div>
-        <div class="intro">
-            <div class="leftSide">
-                <h2>Info</h2>
-                <h3>Christofer Carlsson? Who's that?</h3>
-                <p>25 years old</p>
-                <p>Living in Lerum, Sweden</p>
+        <div class="textContainer">
+            <div id="intro" class="boxes">
+                <div id="introFirstQuarter" class="boxesFirstQuarter">
+
+                </div>
+                <div id="introSecondQuarter" class="boxesSecondQuarter">
+                    <h3>Hello!</h3>
+                    <p>Thank you for taking time to read my resume! <br> My name is Christofer Carlsson and I am 25 years old.</p>
+                    <p>I have been living together with my wife for over 6 years now, and I have always been passionate about programing.</p>
+                    <p>I have been a bit of a "Jack of all trade" and done a lot of different types of jobs, not only in the branch of programing.</p>
+                    <p>But after working here and there, I always went back to my hobby of building things with the use of code.</p>
+                    <p>And after alot of thinking I finally decided to make my hobby into my real profession, and after a magical journey, here I am!</p>
+                    <p>I hope that you enjoy reading through my resume, and if you have any question please contact my through the website!</p>
+                    <p>Have a wonderful day!</p>
+                    <h3>With love // Christofer Carlsson</h3>
+                </div>
+                <div id="introThirdQuarter" class="boxesThirdQuarter">
+                    <img src="potato.jpg" alt="This is me">
+                </div>
+                <div id="introForthQuarter" class="boxesForthQuarter">
+                    <h2>Info</h2>
+                    <h3>Christofer Carlsson? Who's that?</h3>
+                    <p>25 years old</p>
+                    <p>Living in Lerum, Sweden</p>
+                </div>
             </div>
-            <div class="rightSide">
-                <h3>Hello!</h3>
-                <p>Thank you for taking time to read my resume! <br> My name is Christofer Carlsson and I am 25 years old.</p>
-                <p>I have been living together with my wife for over 6 years now, and I have always been passionate about programing.</p>
-                <p>I have been a bit of a "Jack of all trade" and done a lot of different types of jobs, not only in the branch of programing.</p>
-                <p>But after working here and there, I always went back to my hobby of building things with the use of code.</p>
-                <p>And after alot of thinking I finally decided to make my hobby into my real profession, and after a magical journey, here I am!</p>
-                <p>I hope that you enjoy reading through my resume, and if you have any question please contact my through the website!</p>
-                <p>Have a wonderful day!</p>
-                <h3>With love // Christofer Carlsson</h3>
+
+
+            <div id="experience" class="boxes">
+                <div id="experienceFirstHalf" class="boxesFirstQuarter">
+
+                </div>
+                <div id="experienceFirstHalfTop"class="boxesSecondQuarter">
+
+                </div>
+                <div id="experienceSecondHalf" class="boxesThirdQuarter">
+
+                </div>
+                <div id="experienceSecondHalfTop" class="boxesForthQuarter">
+
+                </div>
             </div>
-        </div>
+
+
+            <div id="studies" class="boxes">
+                <div id="studiesFirstHalf" class="boxesFirstQuarter">
+    
+                </div>
+                <div id="studiesFirstHalfTop"class="boxesSecondQuarter">
+    
+                </div>
+                <div id="studiesSecondHalf" class="boxesThirdQuarter">
+    
+                </div>
+                <div id="studiesSecondHalfTop" class="boxesForthQuarter">
+    
+                </div>
+            </div>
+
+            <div id="link" class="boxes">
+                <div id="linkFirstHalf" class="boxesFirstQuarter">
+        
+                </div>
+                <div id="linkFirstHalfTop"class="boxesSecondQuarter">
+        
+                </div>
+                <div id="linkSecondHalf" class="boxesThirdQuarter">
+        
+                </div>
+                <div id="linkSecondHalfTop" class="boxesForthQuarter">
+        
+                </div>
+            </div>
+
+
+            <div id="contact" class="boxes">
+                <div id="contactFirstHalf" class="boxesFirstQuarter">
+
+                </div>
+                <div id="contactFirstHalfTop"class="boxesSecondQuarter">
+
+                </div>
+                <div id="contactSecondHalf" class="boxesThirdQuarter">
+
+                </div>
+                <div id="contactSecondHalfTop" class="boxesForthQuarter">
+
+                </div>
+            </div>
+         </div>
     </main>
 </body>
 </html>
