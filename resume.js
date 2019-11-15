@@ -16,24 +16,37 @@ let contactBox;
 window.addEventListener("load", initiatePage)
 
 function initiatePage(){
-    let introButton = document.getElementsByClassName("navigationButtons")[0];
-    let experienceButton = document.getElementsByClassName("navigationButtons")[1];
-    let studiesButton = document.getElementsByClassName("navigationButtons")[2];
-    let linkButton = document.getElementsByClassName("navigationButtons")[3];
-    let contactButton = document.getElementsByClassName("navigationButtons")[4];
+    setButtons();
+    setBoxes();
+    changeMousePointer();
+
+    window.addEventListener("resize", onWindowResize)
     
+}
+
+function changeMousePointer(){
+    let allButtons = document.getElementsByClassName("navigationButtons");
+    
+    for (let i = 0; i < allButtons.length; i++) {
+        allButtons[i].style.cursor = "hand" ;
+        allButtons[i].style.cursor = "pointer" ;
+    }
+}
+
+function setBoxes(){
     introBox = document.getElementById("intro");
     experienceBox = document.getElementById("experience");
     studiesBox = document.getElementById("studies");
     linkBox = document.getElementById("link");
     contactBox = document.getElementById("contact");
-    
-    let allButtons = document.getElementsByClassName("navigationButtons");
+}
 
-    for (let i = 0; i < allButtons.length; i++) {
-        allButtons[i].style.cursor = "hand" ;
-        allButtons[i].style.cursor = "pointer" ;
-    }
+function setButtons(){
+    let introButton = document.getElementsByClassName("navigationButtons")[0];
+    let experienceButton = document.getElementsByClassName("navigationButtons")[1];
+    let studiesButton = document.getElementsByClassName("navigationButtons")[2];
+    let linkButton = document.getElementsByClassName("navigationButtons")[3];
+    let contactButton = document.getElementsByClassName("navigationButtons")[4];
 
     introButton.addEventListener("click", changeSceneToIntro);
     experienceButton.addEventListener("click", changeSceneToExperience);
@@ -41,8 +54,9 @@ function initiatePage(){
     linkButton.addEventListener("click", changeSceneToLink);
     contactButton.addEventListener("click", changeSceneToContact);
 
-    window.addEventListener("resize", onWindowResize)
 }
+
+
 
 function onWindowResize(){
     if (window.innerWidth < 800){
