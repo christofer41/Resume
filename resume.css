@@ -5,13 +5,19 @@ html,body{
 
 body{
     margin: 0;
-    background-color: rgb(185, 206, 212);
+    background-image: url("desk.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
 }
 
 header{
     height: 3.4rem;
-    background-color: #95c6d4;
+    color: white;
+
+    background-image: url("header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
     display: flex;
     justify-content: center;
@@ -33,12 +39,29 @@ header{
     width: 80%;
 }
 
-.navigator >*{
-    margin: 1rem;
+.navigationButtonsDiv {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+}
+
+.navigationButtons{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;  /* Safari */
+    -khtml-user-select: none;  /* Konqueror HTML */
+    -moz-user-select: none;   /* Old versions of Firefox */
+    -ms-user-select: none;   /* Internet Explorer/Edge */
+     user-select: none;     /* Other */
+}
+
+.navigationButtons {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .navigationButtons:hover{
-    box-shadow: 0px 5px black;
+    box-shadow: 0 2px black; 
+    border-radius: 6px;
     font-weight: bold;
 }
 
@@ -56,6 +79,9 @@ main{
     border: 2px solid rgb(33, 83, 46);
     min-height: 30rem;
     min-width: 80%;
+    max-width: 90%;
+
+    box-shadow: 15px -15px 5px  rgba(0, 0, 0, 0.486);
 }
 
 #introThirdQuarter{
@@ -72,7 +98,11 @@ main{
 
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10rem auto;
+    grid-template-rows: 35% auto;
+}
+
+.boxes div>*{
+    margin: 1rem;
 }
 
 .boxesFirstQuarter{
@@ -106,8 +136,10 @@ main{
 }
 
 .boxes img{
-    width: 15rem;
-    height: 10rem;
+    width: 10rem;
+    border: 2px dotted gray;
+    border-radius: 40%;
+    margin: 0.5rem;
 
 }
 
