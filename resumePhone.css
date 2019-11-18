@@ -5,191 +5,87 @@ html,body{
 
 body{
     margin: 0;
-    background-color: rgb(185, 206, 212);
+    background-color: #FEFFFD;
     height: 100%;
 }
 
 header{
-    height: 3.4rem;
-
-    background-image: url("header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-    justify-content: center;
-
-   top: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    
-
-    border: 2px solid rgb(41, 41, 41);
-    border-top: none;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
-}
-
-.navigator{ 
-    display: flex;
-    justify-content: center;
-    width: 80%;
-}
-
-.navigationButtonsDiv {
-    display: flex;
-    justify-content: center;
-    color: white;
-    width: 5rem;
-}
-
-.navigationButtons{
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;  /* Safari */
-    -khtml-user-select: none;  /* Konqueror HTML */
-    -moz-user-select: none;   /* Old versions of Firefox */
-    -ms-user-select: none;   /* Internet Explorer/Edge */
-     user-select: none;     /* Other */
-}
-
-.navigationButtons:hover{
-    font-weight: bold;
-}
-
-main{
-    margin-top: 3.4rem;
-}
-
-.textContainer{
-    border: 2px solid blue;
-}
-
-.boxes{
-    border: 2px solid red;
-
-    background-color: rgb(103, 107, 143);
-
-    display: grid;
-    grid-template-columns: 100%;
-    grid-auto-rows: auto;
-}
-
-
-
-#introFirstQuarter{
-    grid-column: 1;
-    grid-row: 3;
     display: none;
 }
 
-#introSecondQuarter{
-    grid-column: 1;
-    grid-row: 4;
-    border: 2px solid blue
+.hamburger{
+    left: 4px;
+    top: 4px;
+    position: fixed;
 }
 
-#introThirdQuarter{
-    grid-column: 1;
-    grid-row: 1;
+#linksForHamburger{
+    display: none;
+    height: 80%;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+
+    background-color: white;
+
+    animation-duration: 100ms;
+    animation-name: hamburgerSlideIn;
+    animation-timing-function: ease-in;
 }
 
-#introForthQuarter{
-    grid-column: 1;
-    grid-row: 2;
-}
-
-
-
-#experienceFirstQuarter{
-    grid-column: 1;
-    grid-row: 5;
-}
-
-#experienceSecondQuarter{
-    grid-column: 1;
-    grid-row: 6;
-}
-
-#experienceThirdQuarter{
-    grid-column: 1;
-    grid-row: 7;
-}
-
-#experienceForthQuarter{
-    grid-column: 1;
-    grid-row: 8;
+@keyframes hamburgerSlideIn{
+    from{
+        height: 0%;
+    }
+    to{
+        height: 80%;
+    }
 }
 
 
-#studiesFirstQuarter{
-    grid-column: 1;
-    grid-row: 9;
-}
+#linksForHamburger div>*{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
 
-#studiesSecondQuarter{
-    grid-column: 1;
-    grid-row: 10;
-}
-
-#studiesThirdQuarter{
-    grid-column: 1;
-    grid-row: 11;
-}
-
-#studiesForthQuarter{
-    grid-column: 1;
-    grid-row: 12;
+    animation-duration: 100ms;
+    animation-name: hamburgerSlideInText;
+    animation-timing-function: linear;
 }
 
 
-#linkFirstQuarter{
-    grid-column: 1;
-    grid-row: 13;
+@keyframes hamburgerSlideInText{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
-#linkSecondQuarter{
-    grid-column: 1;
-    grid-row: 14;
-}
-
-#linkThirdQuarter{
-    grid-column: 1;
-    grid-row: 15;
-}
-
-#linkForthQuarter{
-    grid-column: 1;
-    grid-row: 16;
+main{
+    border: 3px solid #9ED5DB;
 }
 
 
-#contactFirstQuarter{
-    grid-column: 1;
-    grid-row: 17;
+.boxes{
+    background-color: rgb(209, 209, 209);
+
+    display: flex;
+    flex-direction: column;
 }
 
-#contactSecondQuarter{
-    grid-column: 1;
-    grid-row: 18;
-}
-
-#contactThirdQuarter{
-    grid-column: 1;
-    grid-row: 19;
-}
-
-#contactForthQuarter{
-    grid-column: 1;
-    grid-row: 20;
-}
 
 .boxes div >* {
     display: flex;
     justify-content: center;
+    margin: 0.5rem;
 }
 
 #desktopMe{
     width: 100%;
     border-radius: 30%;
+    margin: 0;
 }

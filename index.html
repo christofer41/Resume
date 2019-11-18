@@ -11,7 +11,11 @@
     
     <!--JQuerry-->
     <script defer type="text/javascript" src="jquery-3.4.1.js"></script>
+    <!--Länk till javascript-->
     <script defer type="text/javascript" media="(min-width: 800px)" src="resume.js"></script>
+
+    <!--Länkar till Font Awesome-->
+    <script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
 
     <title>Interactive Resume</title>
 </head>
@@ -26,26 +30,43 @@
             <div class="navigationButtonsDiv">
                 <p class="navigationButtons">Experience</p>
             </div>
-
+            
             <div class="navigationButtonsDiv">
                 <p class="navigationButtons">Studies</p>
             </div>
-
+            
             <div class="navigationButtonsDiv">
                 <p class="navigationButtons">link</p>
             </div>
-
+            
             <div class="navigationButtonsDiv">
                 <p class="navigationButtons">Contact</p>
             </div>
-
+            
         </div>
     </header>
     <main>
-        <div class="textContainer">
+        <div id="linksForHamburger">
+            <div>
+                <p class="navigationButtons">Intro</p>
+                <p class="navigationButtons">Experience</p>
+                <p class="navigationButtons">Studies</p>
+                <p class="navigationButtons">link</p>
+                <p class="navigationButtons">Contact</p>
+            </div>
+        </div>
+
+        <div class="hamburger">
+            <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+                <i class="fa fa-bars" style="font-size: 39px;"></i>    
+            </a>
+        </div>
+        
+        
+        <div id="textContainer">
             <div id="intro" class="boxes">
                 <div id="introFirstQuarter" class="boxesFirstQuarter">
-
+                    <img id="desktopMe" src="potato.jpg" alt="This is me for desktop">
                 </div>
                 <div id="introSecondQuarter" class="boxesSecondQuarter">
                     <h3>Hello!</h3>
@@ -59,7 +80,7 @@
                     <h3>With love // Christofer Carlsson</h3>
                 </div>
                 <div id="introThirdQuarter" class="boxesThirdQuarter">
-                    <img id="desktopMe" src="potato.jpg" alt="This is me for desktop">
+                    
                 </div>
                 <div id="introForthQuarter" class="boxesForthQuarter">
                     <h2>Info</h2>
@@ -68,7 +89,6 @@
                     <p>Living in Lerum, Sweden</p>
                 </div>
             </div>
-
 
             <div id="experience" class="boxes">
                 <div id="experienceFirstHalf" class="boxesFirstQuarter">
@@ -131,7 +151,7 @@
 
                 </div>
                 <div id="contactSecondHalf" class="boxesThirdQuarter">
-
+                    <p>Hello</p>
                 </div>
                 <div id="contactSecondHalfTop" class="boxesForthQuarter">
 

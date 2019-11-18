@@ -45,7 +45,7 @@ header{
     width: 5rem;
 }
 
-.navigationButtons{
+.navigationButtons{               /* Make it so the user can't select the text on the buttons */
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none;  /* Safari */
     -khtml-user-select: none;  /* Konqueror HTML */
@@ -74,17 +74,45 @@ main{
     width: 100%;
 }
 
+.hamburger{
+    display: none;
+}
 
-.textContainer{
+#linksForHamburger{
+    display: none;
+}
+
+.animateTextContainer{
+    position: absolute;
+    animation-duration: 1s;
+    animation-name: slideIn;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes slideIn{
+    10%{
+
+    }
+    20%{
+
+    }
+    30%{
+
+    }
+}
+
+
+#textContainer{
     border: 2px solid rgb(33, 83, 46);
     min-height: 30rem;
     min-width: 80%;
     max-width: 90%;
-
+    position: relative;
     box-shadow: 15px -15px 5px  rgba(0, 0, 0, 0.486);
 }
 
-#introThirdQuarter{
+#introFirstQuarter{
     display: flex;
     justify-content: flex-end;
 }
@@ -106,8 +134,9 @@ main{
 }
 
 .boxesFirstQuarter{
-    display: none;
-    border: 2px solid red;
+    grid-column: 2;
+    grid-row: 1;
+    border: 2px solid green;
 }
 
 .boxesSecondQuarter{
@@ -118,9 +147,9 @@ main{
 }
 
 .boxesThirdQuarter{
-    grid-column: 2;
-    grid-row: 1;
-    border: 2px solid green;
+    display: none;
+    border: 2px solid red;
+
 
 }
 
