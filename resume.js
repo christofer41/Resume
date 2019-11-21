@@ -1,21 +1,3 @@
-/** @type {HTMLDivElement} */
-let introBox;
-
-/** @type {HTMLDivElement} */
-let experienceBox;
-
-/** @type {HTMLDivElement} */
-let studiesBox;
-
-/** @type {HTMLDivElement} */
-let referencesBox;
-
-/** @type {HTMLDivElement} */
-let contactBox;
-
-/** @type {HTMLDivElements} */
-let allButtons;
-
 /** Will initate when page is loaded */
 window.addEventListener("load", initiatePage)
 
@@ -33,6 +15,7 @@ function initiatePage(){
     }else{
         setButtons();
     }
+    createVariables()
     setBoxes();
     changeMousePointer();
 }
@@ -184,6 +167,29 @@ function submitForm(){
 function removeSubmitForm(){
     const sentMessageBigBox = document.getElementById("sentMessageBigBox"); 
     sentMessageBigBox.style.display = "none";
+}
+
+/**
+ * We create variables for the boxes
+ */
+function createVariables(){
+    /** @type {HTMLDivElement} */
+    let introBox;
+
+    /** @type {HTMLDivElement} */
+    let experienceBox;
+
+    /** @type {HTMLDivElement} */
+    let studiesBox;
+
+    /** @type {HTMLDivElement} */
+    let referencesBox;
+
+    /** @type {HTMLDivElement} */
+    let contactBox;
+
+    /** @type {HTMLDivElements} */
+    let allButtons;
 }
 
 /**
