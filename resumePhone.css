@@ -1,3 +1,14 @@
+@font-face { /*This is a custom font that we are using*/
+    font-family: goudy_bookletter;
+    src: url(goudy_bookletter_1911.otf);
+}
+
+/*This is to give all of our headers this font*/
+h1,h2,h3{
+    font-family: goudy_bookletter;
+}
+
+/*We set the width and height to perfectly fit the screen*/
 html,body{
     width: 100%;
     height: 100%;
@@ -5,23 +16,32 @@ html,body{
 
 body{
     margin: 0;
-    background-color: #FEFFFD;
+    background-color: rgb(209, 209, 209);
     height: 100%;
 }
 
+/*Our header should not be shown*/
 header{
     display: none;
 }
 
+/*The hamburger menu*/
 .hamburger{
     left: 4px;
     top: 4px;
     position: fixed;
 }
 
+/*The hamburger logo*/
+.fa-bars{ 
+    color: rgb(255, 0, 43);
+}
+
+/*The links for the hamburger menu*/
 #linksForHamburger{
     display: none;
     height: 80%;
+    font-family: goudy_bookletter;
 
     top: 0;
     left: 0;
@@ -35,6 +55,7 @@ header{
     animation-timing-function: ease-in;
 }
 
+/*The keyframe animation for the hamburger menu*/
 @keyframes hamburgerSlideIn{
     from{
         height: 0%;
@@ -44,7 +65,7 @@ header{
     }
 }
 
-
+/*The box for the links in the hamburger menu*/
 #linksForHamburger div>*{
     display: flex;
     justify-content: center;
@@ -55,7 +76,7 @@ header{
     animation-timing-function: linear;
 }
 
-
+/*The keyframe animation for the text in the hamburger menu*/
 @keyframes hamburgerSlideInText{
     from{
         opacity: 0;
@@ -69,23 +90,133 @@ main{
     border: 3px solid #9ED5DB;
 }
 
-
+/*The boxes for all the content*/
 .boxes{
-    background-color: rgb(209, 209, 209);
+    border-bottom: black 2px solid;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 
     display: flex;
     flex-direction: column;
 }
 
-
+/*The content inside the div*/
 .boxes div >* {
     display: flex;
     justify-content: center;
     margin: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-#desktopMe{
+/*The div that holds the picture*/
+#introFirstQuarter{
+    border-bottom: 2px solid black;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/*The properties of the form*/
+form{
+    font-family: goudy_bookletter;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/*We make it into a column*/
+.referencesListOther, .theLists, #referencesListPrograming, #experienceListPrograming{
+    display: flex;
+    flex-direction: column;
+}
+
+/*We put a bit of margin*/
+.theLists >*{
+    margin: 0.5rem;
+    
+}
+
+/*We move the content abit to the right*/
+#referencesListPrograming >*{
+    margin-left: 6rem;
+}
+
+/*The properties of the  list items*/
+li{
+    list-style-type: none;
+    margin-left: 6rem;
+
+}
+
+/*We make the content inside the form centered*/
+.formDiv >*{
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+/*We put a small border around the input and textarea*/
+textarea, input{
+    border: 1px solid black;
+}
+
+/*We set all the margin so that the content can be centered*/
+#userMessageDiv >*, #userEmailDiv >*, #userNameDiv >*, #sendButtonDiv >*{
+    margin: 0 auto;
+}
+
+/*The big box for the sent message alert*/
+#sentMessageBigBox{
+    height: 100%;
     width: 100%;
+
+    position: fixed;
+
+    background-color: rgba(0, 0, 0, 0.438);
+    border: 2px solid black;
+
+    z-index: 1;
+    
+    display: none;
+    justify-content: center;
+}
+
+/*The box inside of the big box for the sent message alert*/
+#sentMessage{
+    height: 50%;
+    width: 100%;
+
+    background-color: rgba(192, 191, 191, 0.87);
+    margin-top: 8rem;
+
+    display: flex;
+    justify-content: center;
+
+    opacity: 1;
+}
+
+/*We move text of the inside of the message alert*/
+#sentMessage >*{
+    margin-top: 6rem;
+}
+
+
+#confirmMessageButton{
+    margin: 0 auto;
+    display: block;
+}
+
+/*We set properties of the image*/
+#thePictureOfMe{
+    width: 100%;
+    max-width: 21rem;
+    height: 24rem;
     border-radius: 30%;
-    margin: 0;
+    margin: 0 auto;
+    display: block;
 }

@@ -21,6 +21,7 @@
 </head>
 <body>
     <header>
+        <!--All the buttons-->
         <div class="navigator">
             
             <div class="navigationButtonsDiv">
@@ -36,7 +37,7 @@
             </div>
             
             <div class="navigationButtonsDiv">
-                <p class="navigationButtons">link</p>
+                <p class="navigationButtons">References</p>
             </div>
             
             <div class="navigationButtonsDiv">
@@ -45,7 +46,9 @@
             
         </div>
     </header>
+    
     <main>
+        <!--The links inside the hamburger menu-->
         <div id="linksForHamburger">
             <div>
                 <p class="navigationButtons">Intro</p>
@@ -56,17 +59,29 @@
             </div>
         </div>
 
+        <!--The hamburger menu-->
         <div class="hamburger">
             <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
                 <i class="fa fa-bars" style="font-size: 39px;"></i>    
             </a>
         </div>
+
+        <!--The box displaying the "message sent"-->
+        <div id="sentMessageBigBox">
+            <div id="sentMessage">
+                <div>
+                    <h2>Your message has been sent!</h2>
+                    <button id="confirmMessageButton">Confirm</button>
+                </div>
+            </div>
+        </div>
         
-        
+        <!--The container for all of the boxes that we will switch between-->
         <div id="textContainer">
+             <!--The intro container-->
             <div id="intro" class="boxes">
                 <div id="introFirstQuarter" class="boxesFirstQuarter">
-                    <img id="desktopMe" src="potato.jpg" alt="This is me for desktop">
+                    <img id="thePictureOfMe" src="me.jpg" alt="This is me for desktop">
                 </div>
                 <div id="introSecondQuarter" class="boxesSecondQuarter">
                     <h3>Hello!</h3>
@@ -79,9 +94,6 @@
                     <p>Have a wonderful day!</p>
                     <h3>With love // Christofer Carlsson</h3>
                 </div>
-                <div id="introThirdQuarter" class="boxesThirdQuarter">
-                    
-                </div>
                 <div id="introForthQuarter" class="boxesForthQuarter">
                     <h2>Info</h2>
                     <h3>Christofer Carlsson? Who's that?</h3>
@@ -90,74 +102,121 @@
                 </div>
             </div>
 
+            <!--The experience container-->
             <div id="experience" class="boxes">
                 <div id="experienceFirstHalf" class="boxesFirstQuarter">
-                    <p>test</p>
+                    <div class="boxName"><h2>Experience</h2></div>
+                    <div>
+                        <h2>Programming focused</h2>
+                    </div>
+                    <ul id="experienceListPrograming">
+                        <li>None really</li>
+                    </ul>
                 </div>
                 <div id="experienceFirstHalfTop"class="boxesSecondQuarter">
-
-                </div>
-                <div id="experienceSecondHalf" class="boxesThirdQuarter">
-                    <p>test</p>
-                </div>
-                <div id="experienceSecondHalfTop" class="boxesForthQuarter">
-
+                    <div>
+                        <h2>Other</h2>
+                    </div>
+                    <ul class="theLists" id="experienceListOther">
+                        <li>02/2011 - 03/2011 Vikadamm [Retirement Home]</li>
+                        <li>02/2012 - 03/2012 Janexet [Daily ActiviTy Facility]</li>
+                        <li>02/2013 - 02/2015 DHL Frölunda [Warehouse]</li>
+                        <li>03/2015 - 03/2016 Lärarpoolen [Daycare Teacher]</li>
+                        <li>04/2016 - 01/2017 Goexcellent [IT-Support]</li>
+                        <li>05/2017 - 02/2018 Student Consulting [Daycare/Pre-school Teacher]</li>
+                        <li>02/2018 - 07/2018 Sektor Lärande Lerum [Daycare Teacher]</li>
+                        <li>02/2019 - 07/2019 Academic Work [Warehouse]</li>
+                    </ul>
                 </div>
             </div>
 
-
+            <!--The studies container-->
             <div id="studies" class="boxes">
                 <div id="studiesFirstHalf" class="boxesFirstQuarter">
-
-                </div>
-                <div id="studiesFirstHalfTop"class="boxesSecondQuarter">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure laboriosam dolore maiores, libero autem provident nisi id. Esse consectetur veniam corrupti earum nemo perspiciatis aspernatur, ipsa blanditiis error est?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure laboriosam dolore maiores, libero autem provident nisi id. Esse consectetur veniam corrupti earum nemo perspiciatis aspernatur, ipsa blanditiis error est?</p>
-
-                </div>
-                <div id="studiesSecondHalf" class="boxesThirdQuarter">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure laboriosam dolore maiores, libero autem provident nisi id. Esse consectetur veniam corrupti earum nemo perspiciatis aspernatur, ipsa blanditiis error est?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure laboriosam dolore maiores, libero autem provident nisi id. Esse consectetur veniam corrupti earum nemo perspiciatis aspernatur, ipsa blanditiis error est?</p>
-                    
-                </div>
-                <div id="studiesSecondHalfTop" class="boxesForthQuarter">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure laboriosam dolore maiores, libero autem provident nisi id. Esse consectetur veniam corrupti earum nemo perspiciatis aspernatur, ipsa blanditiis error est?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure laboriosam dolore maiores, libero autem provident nisi id. Esse consectetur veniam corrupti earum nemo perspiciatis aspernatur, ipsa blanditiis error est?</p>
-                    
+                    <div>
+                        <h2>My studies</h2>
+                    </div>
+                    <ul class="theLists" id="studiesList">
+                        <li>2010 - 2013 Mimers hus gymnasium [Medicine]</li>
+                        <li>2019 Programing 1 [C#]</li>
+                        <li>2019 Mathematics 2B</li>
+                        <li>2019 Webdesign 1</li>
+                        <li>2019 Webdesign 2</li>
+                        <li>2019/10 - ** Front End Developer</li>
+                    </ul>
                 </div>
             </div>
 
-            <div id="link" class="boxes">
-                <div id="linkFirstHalf" class="boxesFirstQuarter">
-        
+            <!--The references container-->
+            <div id="references" class="boxes">
+                <div id="referencesFirstHalf" class="boxesFirstQuarter">
+                    <div class="boxName"><h2>References</h2></div>
+                    <div>
+                        <h2>Programming focused</h2>
+                    </div>
+                    <ul id="referencesListPrograming">
+                        <li>None really</li>
+                    </ul>
                 </div>
-                <div id="linkFirstHalfTop"class="boxesSecondQuarter">
-        
-                </div>
-                <div id="linkSecondHalf" class="boxesThirdQuarter">
-        
-                </div>
-                <div id="linkSecondHalfTop" class="boxesForthQuarter">
-        
+                <div id="referencesFirstHalfTop"class="boxesSecondQuarter">
+                    <div>
+                        <h2>Other</h2>
+                    </div>
+                    <ul  class="referencesListOther">
+                        <li>Ingela ***</li>
+                        <li>Administrative Assistent</li>
+                        <li>Almekärrs pre-schools</li>
+                        <li>ingela.***@***.se</li>
+                        <li>Direct: 0302-******</li>
+                        <li>Mobile: 070-*****</li>
+                    </ul>
+                    <ul class="referencesListOther">
+                        <li>Edith ***</li>
+                        <li>Team Manager</li>
+                        <li>Goexcellent/Webhelp</li>
+                        <li>Edith.***@***.se</li>
+                        <li>Mobile: 070-*****</li>
+                    </ul>
+                    <ul class="referencesListOther">
+                        <li>Veronica ***</li>
+                        <li>Team Leader</li>
+                        <li>DHL Frölunda</li>
+                        <li>Veronica.***@***.se</li>
+                        <li>Mobile: 070-*****</li>
+                    </ul>
                 </div>
             </div>
 
-
+            <!--The contact container-->
             <div id="contact" class="boxes">
                 <div id="contactFirstHalf" class="boxesFirstQuarter">
-
+                    <form onsubmit="submitForm()" action="newPage.html">
+                        <div>
+                            <h2>Contact Me!</h2>
+                        </div>
+                        <div class="formDiv" id="userNameDiv">
+                            <label for="userName">Please enter your name</label>
+                            <input type="text" name="userName" id="userName" placeholder="T.ex Joe Smith" onkeyup="saveTheInfo()">
+                        </div>
+                        <div class="formDiv" id="userEmailDiv">
+                            <label for="userEmail">Please enter your email</label>
+                            <input type="email" name="userEmail" id="userEmail" placeholder="*****@***.com" onkeyup="saveTheInfo()">
+                        </div>
+                    </form>
                 </div>
-                <div id="contactFirstHalfTop"class="boxesSecondQuarter">
-
-                </div>
-                <div id="contactSecondHalf" class="boxesThirdQuarter">
-                    <p>Hello</p>
-                </div>
-                <div id="contactSecondHalfTop" class="boxesForthQuarter">
-
+                <div id="contactFirstHalfTop" class="boxesSecondQuarter">
+                    <form onsubmit="submitForm();return false">
+                            <div class="formDiv" id="userMessageDiv">
+                                <label for="userMessage">Please enter your message</label>
+                                <textarea name="userMessage" id="userMessage" placeholder="message" cols="30" rows="10"></textarea>
+                            </div>
+                            <div id="sendButtonDiv" class="formDiv">
+                                <button type="submit">Submit</button>
+                            </div>
+                    </form>
                 </div>
             </div>
-         </div>
+        </div>
     </main>
 </body>
 </html>

@@ -1,3 +1,20 @@
+@font-face { /*This is a custom font that we are using*/
+    font-family: goudy_bookletter;
+    src: url(goudy_bookletter_1911.otf);
+}
+
+/*This is to give all of our headers this font*/
+h1,h2,h3, label{
+    font-family: goudy_bookletter;
+
+}
+
+/*This is to put a space between all the text*/
+p{
+    margin: 0.5rem;
+}
+
+/*We set the width and height to perfectly fit the screen*/
 html,body{
     width: 100vw;
     height: 100vh;
@@ -5,14 +22,18 @@ html,body{
 
 body{
     margin: 0;
-    background-image: url("desk.jpg");
+    height: 100%;
+
+    background-image: url("desk.jpg"); /*Our background image*/
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+
+    overflow: hidden; /*We don't want scrolling to be enabled*/
 }
 
+/*Our header that we make absolute and will not move*/
 header{
-    height: 3.4rem;
+    height: 3.4rem; 
     color: white;
 
     background-image: url("header.jpg");
@@ -26,6 +47,7 @@ header{
     left: 0;
     right: 0;
     position: absolute;
+    z-index: 2;
 
     border: 2px solid rgb(41, 41, 41);
     border-top: none;
@@ -33,12 +55,15 @@ header{
     border-bottom-left-radius: 16px;
 }
 
+/*The div inside the header, and that hold all of our buttons*/
 .navigator{ 
     display: flex;
     justify-content: center;
     width: 80%;
+    font-family: goudy_bookletter;
 }
 
+/*Every buttons personal div*/
 .navigationButtonsDiv {
     display: flex;
     justify-content: center;
@@ -52,13 +77,12 @@ header{
     -moz-user-select: none;   /* Old versions of Firefox */
     -ms-user-select: none;   /* Internet Explorer/Edge */
      user-select: none;     /* Other */
+
+     padding-left: 5px;
+     padding-right: 5px;
 }
 
-.navigationButtons {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
+/*When the user hover over the buttons*/
 .navigationButtons:hover{
     box-shadow: 0 2px black; 
     border-radius: 6px;
@@ -74,6 +98,7 @@ main{
     width: 100%;
 }
 
+/*We dont want the hamburger or links to be visable*/
 .hamburger{
     display: none;
 }
@@ -82,29 +107,36 @@ main{
     display: none;
 }
 
+/*This is the animation for the text container*/
 .animateTextContainer{
-    position: absolute;
-    animation-duration: 1s;
+    animation-duration: 300ms;
     animation-name: slideIn;
     animation-timing-function: linear;
     animation-iteration-count: 1;
+    overflow: hidden;
 }
 
+/*Here is the keyframe animation*/
 @keyframes slideIn{
-    10%{
-
+    0%{
+        transform: translateX(0%);
     }
-    20%{
 
+    50% {
+        transform: translateX(-120%);
     }
-    30%{
+    51% {
+        transform: translateX(120%);
+    }
 
+    100%{
+        transform: translateX(0%);
     }
 }
 
-
+/*The container that will hold all of the boxes*/
 #textContainer{
-    border: 2px solid rgb(33, 83, 46);
+    border: 1px solid rgb(46, 46, 46);
     min-height: 30rem;
     min-width: 80%;
     max-width: 90%;
@@ -117,10 +149,10 @@ main{
     justify-content: flex-end;
 }
 
+/*All the boxes that will change depending on what the user selects*/
 .boxes{
     min-height: 30rem;
     width: 100%;
-    border: 2px solid blue;
 
     background-color: #EEEDEB;
 
@@ -129,49 +161,154 @@ main{
     grid-template-rows: 35% auto;
 }
 
-.boxes div>*{
-    margin: 1rem;
-}
-
+/*The first quarter*/
 .boxesFirstQuarter{
     grid-column: 2;
     grid-row: 1;
-    border: 2px solid green;
+    border: 1px solid rgb(46, 46, 46);
 }
 
+/*The second quarter*/
 .boxesSecondQuarter{
     grid-column: 1;
     grid-row: 1 / 4;
-    border: 2px solid purple;
+    border: 1px solid rgb(46, 46, 46);
 
 }
 
+/*The third quarter*/
 .boxesThirdQuarter{
     display: none;
-    border: 2px solid red;
-
-
+    border: 1px solid rgb(46, 46, 46);
 }
 
+/*The forth quarter*/
 .boxesForthQuarter{
     grid-column: 2;
     grid-row: 2 / 4;
-    border: 2px solid orange;
+    border: 1px solid rgb(46, 46, 46);
 }
 
+/*The content inside the divs of the boxes will be centered*/
 .boxes div>*{
     display: flex;
     justify-content: center;
 }
 
-.boxes img{
-    width: 10rem;
+/*The image properties*/
+#thePictureOfMe{
+    width: 9rem;
+    height: 9rem;
     border: 2px dotted gray;
     border-radius: 40%;
     margin: 0.5rem;
+}
+
+/*The properties of the list*/
+ul{
+    display: flex;
+    flex-direction: column;
+}
+
+/*The list items*/
+li{
+    display: flex;
+    justify-content: center;
+}
+
+/*Our form properties*/
+form{    
+    display: flex;
+    flex-direction: column;
+}
+
+/*We set all the margin so that the content can be centered*/
+#userMessageDiv >*, #userEmailDiv >*, #userNameDiv >*, #sendButtonDiv >*{
+    margin: 0 auto;
+}
+
+#userMessageDiv >*{
+    margin-top: 1rem;
+}
+
+/*We set the hight of the lists*/
+#studiesList,#experienceListOther,#experienceListPrograming, #referencesListPrograming{
+    height: 80%;
+}
+
+/*We set the margin of the divs*/
+#studiesList >*,#experienceListOther >*,#experienceListPrograming >*, #referencesListPrograming >*{
+    margin: 0.5rem;
+}
+
+textarea{
+    text-align: center;
+    width: 35rem;
+}
+
+input{
+    text-align: center;
+}
+
+#contactFirstHalf >*{
+    margin: 0;
+}
+
+#contactFirstHalfTop >*{
+    margin: 0;
+}
+
+/*The big box for the sent message alert*/
+#sentMessageBigBox{
+    height: 100vh;
+    width: 100vw;
+
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, 0.438);
+    border: 2px solid black;
+
+    z-index: 1;
+
+    display: none;
+    justify-content: center;
 
 }
 
+/*The box inside of the big box for the sent message alert*/
+#sentMessage{
+    height: 50%;
+    width: 50%;
+
+    background-color: rgba(192, 191, 191, 0.87);
+    margin-top: 8rem;
+
+    display: flex;
+    justify-content: center;
+
+    opacity: 1;
+    
+}
+
+/*The name for the box selected*/
+.boxName{
+    position: absolute;
+    width: 30%;
+    background-color: #EEEDEB;
+
+    left: 35%;
+}
+
+#sentMessage >*{
+    margin-top: 6rem;
+}
+
+#confirmMessageButton{
+    margin: 0 auto;
+    display: block;
+}
+
+/*What box shall be shown, intro is the default*/
 #intro{
     display: grid;
 }
@@ -184,7 +321,7 @@ main{
     display: none;
 }
 
-#link{
+#references{
     display: none;
 }
 
