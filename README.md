@@ -1,6 +1,8 @@
 # Resume
 Demo : https://christofer41.github.io/Resume/ GitHub Repot : https://github.com/christofer41/Resume
 
+OBS!! Detta är ett exempel på ett CV, så Kontakta mig funktionen fungerar ej!!
+
 Uppgiften var att skapa ett responsitvt CV som representerar sig själv.
 Jag spenderade dom första dagarna genom att testa olika layouts for hemsidan, så det blev mycket tid spenderat åt det.
 Sedan så spenderade jag tid för att skapa mitt "box switch" system som jag hade.
